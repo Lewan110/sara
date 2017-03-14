@@ -37,6 +37,7 @@ def transcribe(duration):
 
 	#Sprawdź czy próbka dźwięku jest wystarczająco głośna
 	#------------------------------------
+	"""
 	cmd = 'sox ' + filename + ' -n stat'
 	p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=STDOUT, close_fds=True)
 	soxOutput = p.stdout.read()
@@ -50,7 +51,7 @@ def transcribe(duration):
 	if (maxAmpValue < 0.1) :
 		#Próbka za cicha - nic nie rób
 		return ""	
-
+	"""
 
 
 	AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "test.wav")
